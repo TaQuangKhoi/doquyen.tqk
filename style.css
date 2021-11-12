@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 *{
@@ -15,7 +14,7 @@ body{
 }
 
 .wrapper .sidebar{
-    background: rgb(5, 68, 104);
+    background: #054468;
     position: fixed;
     top: 0;
     left: 0;
@@ -24,9 +23,3 @@ body{
     padding: 20px 0;
     transition: all 0.5s ease;
 }
-
-DEV Community – A constructive and inclusive social network for software developers. With you every step of your journey.
-
-Built on Forem — the open source software that powers DEV and other inclusive communities.
-
-Made with love and Ruby on Rails. DEV Community © 2016 - 2021.
