@@ -1,0 +1,465 @@
+Skip to content
+Search...
+
+Create account
+
+105
+
+30
+
+201
+
+Cover image for Sidebar Menu Using HTML and CSS
+Foolish Developer
+Foolish Developer
+Posted on Jun 20 • Updated on Aug 26
+
+Sidebar Menu Using HTML and CSS
+#html #css #javascript #webdev
+In this article you will learn how to create sidebar menu using HTML CSS and JavaScript code. Like the navigation menu bar, the sidebar menu is used on many websites.
+
+You can create a nice side menu using basic HTML CSS and JavaScript programming code. I have already designed many more types of sidebar menus. You can follow those tutorials if you want.
+
+You can watch live demo, this is a very simple side menu bar with a profile image and some basic text. Below that I have added eight menus here. I added icons to each menu and added hover effects to menu items. When you click on those menu items or move the mouse, the background of those menus will change.
+
+
+Normally the menu bar is fully visible but there is a button that hides the menu bar when clicked. Here I have created a navigation bar but in that case I have not added any menu items. You can add menu items in that space if you want.
+
+Step 1: Create a basic html structure to create sidebars
+To create this you need to create an HTML and CSS file. Then copy the structure below and paste it into the HTML file. In the HTML structure below I have put all the information where you will add the required code. Follow this tutorial and add the code according to the information below.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <!--Top menu -->
+        <div class="sidebar">
+           <!--profile image & text-->
+            <!--menu item-->
+        </div>
+
+    </div>
+  <script>
+
+  </script>
+</body>
+</html>
+Step 2: Design the background using css code
+With that I added some basic CSS code that basically designed the background and gave the sidebar a shape. In this case I have used blue color in the background. You can change this color if you want.
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    background: #f5f6fa;
+}
+
+.wrapper .sidebar{
+    background: rgb(5, 68, 104);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 225px;
+    height: 100%;
+    padding: 20px 0;
+    transition: all 0.5s ease;
+}
+
+Create a basic html structure to create sidebars
+
+Step 3: Add profile images and titles
+As you can see in the demo above, first of all here I used a profile image, a title and some description. I have used the following HTML and CSS programming code to make it. In this case, you can change the profile image to your liking and increase or decrease the size of this image if you want. In this case I used height 100px and width 100px. Here I have used border-radius 50% in the profile image which makes this image look completely round. You can change this percentage if you want to keep it square or other size.
+ <div class="profile">
+                <img src="https://1.bp.blogspot.com/-vhmWFWO2r8U/YLjr2A57toI/AAAAAAAACO4/0GBonlEZPmAiQW4uvkCTm5LvlJVd_-l_wCNcBGAsYHQ/s16000/team-1-2.jpg" alt="profile_picture">
+                <h3>Anamika Roy</h3>
+                <p>Designer</p>
+            </div>
+.wrapper .sidebar .profile{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.wrapper .sidebar .profile img{
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.wrapper .sidebar .profile h3{
+    color: #ffffff;
+    margin: 10px 0 5px;
+}
+
+.wrapper .sidebar .profile p{
+    color: rgb(206, 240, 253);
+    font-size: 14px;
+}
+Add profile images and titles
+
+Step 4: Add menu items in the sidebar
+In this case I have used eight menu items. I have used an icon with each menu to make the menu items more beautiful and attractive. You can change those icons and menu items as you wish.
+<ul>
+                <li>
+                    <a href="#" class="active">
+                        <span class="icon"><i class="fas fa-home"></i></span>
+                        <span class="item">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-desktop"></i></span>
+                        <span class="item">My Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-user-friends"></i></span>
+                        <span class="item">People</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-tachometer-alt"></i></span>
+                        <span class="item">Perfomance</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-database"></i></span>
+                        <span class="item">Development</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-chart-line"></i></span>
+                        <span class="item">Reports</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-user-shield"></i></span>
+                        <span class="item">Admin</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-cog"></i></span>
+                        <span class="item">Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+Step 5: Design menu items with css code
+The following codes are the CSS programming codes that were originally used to design and add colors to the menu items added above. In this case I have used white color between the icons and the text which looks much more interesting on a blue background. You can see below that I have added the effect of hover. When you hover your mouse over or click on that menu, the background will change as you saw in the demo above.
+.wrapper .sidebar ul li a{
+    display: block;
+    padding: 13px 30px;
+    border-bottom: 1px solid #10558d;
+    color: rgb(241, 237, 237);
+    font-size: 16px;
+    position: relative;
+}
+
+.wrapper .sidebar ul li a .icon{
+    color: #dee4ec;
+    width: 30px;
+    display: inline-block;
+}
+
+
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active{
+    color: #0c7db1;
+
+    background:white;
+    border-right: 2px solid rgb(5, 68, 104);
+}
+
+.wrapper .sidebar ul li a:hover .icon,
+.wrapper .sidebar ul li a.active .icon{
+    color: #0c7db1;
+}
+
+.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a.active:before{
+    display: block;
+}
+Add menu items in the sidebar
+
+Step 6: Create navigation bar
+In this case I used a navigation bar but I did not use any link in the navigation bar. In this case I have added a menu button which when clicked will hide the whole menu and when clicked again the menu will appear. The following HTML and CSS programming codes have been used to create and design this menu bar.
+<div class="section">
+            <div class="top_navbar">
+                <div class="hamburger">
+                    <a href="#">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+.wrapper .section{
+    width: calc(100% - 225px);
+    margin-left: 225px;
+    transition: all 0.5s ease;
+}
+
+.wrapper .section .top_navbar{
+    background: rgb(7, 105, 185);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+
+}
+
+.wrapper .section .top_navbar .hamburger a{
+    font-size: 28px;
+    color: #f4fbff;
+}
+
+.wrapper .section .top_navbar .hamburger a:hover{
+    color: #a2ecff;
+}
+
+The following CSS codes basically indicate the exact position of the sidebar when this menu button is activated. This means that when you click on the menu button, the entire side will be hidden. Below I have indicated that when that menu button is clicked, the side will move 225 to the left, that is, it will be completely hidden.
+
+body.active .wrapper .sidebar{
+    left: -225px;
+}
+
+body.active .wrapper .section{
+    margin-left: 0;
+    width: 100%;
+}
+
+Step 7: Add JavaScript code to activate the menu button
+In this case I have used a very small amount of JavaScript code which was originally used to activate the menu button on the navigation menu bar. If you see the demo above, you will understand that I have created a menu button here and if you click on that button, the entire menu bar will be hidden. Now we will activate that button which means when you click on this button the css code added above will be valid. I used the following JavaScript programming code to make it. The JavaScript programming code below is very simple and simple I hope you understand.
+  var hamburger = document.querySelector(".hamburger");
+    hamburger.addEventListener("click", function(){
+        document.querySelector("body").classList.toggle("active");
+    })
+Hope you learned from this tutorial how I created this sidebar menu. I have already made many more designs like this that you can see if you want. If you want to know better how this sidebar works then you can watch its live demo.
+
+You can visit my blog for more tutorials like this.
+https://www.foolishdeveloper.com/
+
+Discussion (15)
+Subscribe
+pic
+Add to the discussion
+ 
+snuppedeluxe profile image
+•
+Sep 3
+
+Thank you.
+I've searched so long for a nice sidebar.
+Now I "know" how to do it at my own :D
+
+
+3
+ 
+remonking4cool profile image
+•
+Jul 28
+
+Fantastic. Please assist with a guide on how to make the sidebar hidden when the page loaded.
+Currently, the sidebar show automatically when the page loaded. I don't want the Sidebar to show by default when the page loaded, I want the sidebar to show only when the menu button is click. Can you assist with that.
+
+Thank you as I await feedback.
+
+
+1
+ 
+kariha_9 profile image
+•
+Sep 22 • Edited on Sep 22
+
+You should add a class called "active" to your body tag.
+
+ss
+
+
+3
+ 
+siddhesh_agarwal profile image
+•
+Oct 23
+
+Thanks for the post, it is really helpful!
+
+
+2
+ 
+anirseven profile image
+•
+Sep 10
+
+Thanks a lot , this really helpful
+
+
+2
+ 
+code_mystery profile image
+•
+Sep 10
+
+Welcome 😀
+
+
+1
+ 
+motz795 profile image
+•
+Jun 26
+
+Hello, I have a small YouTube channel to teach beginners HTML & CSS. Can I do the same idea on the channel with reference to your article as a source?
+
+
+2
+ 
+code_mystery profile image
+•
+Jun 26
+
+Ok
+
+
+1
+ 
+asifrazaars323 profile image
+•
+Jun 21
+
+Magnificent. I shall try
+
+
+2
+ 
+cristoferk profile image
+•
+Jun 20
+
+very nice design!
+
+
+2
+ 
+ummeq profile image
+•
+Jun 20
+
+Awesome👏
+
+
+2
+ 
+code_mystery profile image
+•
+Jun 21
+
+Thank you
+
+
+2
+ 
+ciesluk profile image
+•
+Jun 20
+
+Love the design! This is great!
+
+
+1
+ 
+code_mystery profile image
+•
+Jun 21
+
+Thank you
+
+
+2
+Some comments have been hidden by the post's author - find out more
+
+Code of Conduct • Report abuse
+Read next
+developernation profile image
+Which programming language communities nearly tripled in size in the last 24 months?
+Developer Nation - Nov 5
+
+jdinnovensa profile image
+In Memory Automated UI Testing ASP.NET Core
+Jon Dodd - Nov 5
+
+devtips3 profile image
+Awesome react hooks
+dev tips - Nov 6
+
+codingnninja profile image
+How to make up to $600 writing an article -- from zero to genius.
+Ayobami Ogundiran - Nov 9
+
+
+Foolish Developer
+Follow
+JOINED
+May 7, 2021
+More from Foolish Developer
+Automatic Image Slideshow using HTML & CSS
+#html #css #beginners #webdev
+Responsive Navigation Menu Bar using HTML and CSS
+#html #css #beginners #webdev
+Javascript Age Calculator | Calculate Age from Date of Birth
+#html #css #javascript #webdev
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    background: #f5f6fa;
+}
+
+.wrapper .sidebar{
+    background: rgb(5, 68, 104);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 225px;
+    height: 100%;
+    padding: 20px 0;
+    transition: all 0.5s ease;
+}
+
+DEV Community – A constructive and inclusive social network for software developers. With you every step of your journey.
+
+Built on Forem — the open source software that powers DEV and other inclusive communities.
+
+Made with love and Ruby on Rails. DEV Community © 2016 - 2021.
