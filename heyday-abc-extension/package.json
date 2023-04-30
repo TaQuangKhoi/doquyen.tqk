@@ -26,6 +26,18 @@
   "manifest": {
     "host_permissions": [
       "https://*/*"
+    ],
+    "permissions": [
+      "storage",
+      "tabs",
+      "activeTab",
+      "webNavigation",
+      "webRequest",
+      "cookies",
+      "unlimitedStorage",
+      "clipboardWrite",
+      "history",
+      "clipboardRead"
     ]
   }
 }
