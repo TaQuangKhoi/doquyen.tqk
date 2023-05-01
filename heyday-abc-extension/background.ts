@@ -1,5 +1,7 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, addDoc, getDocs } from "firebase/firestore";
+import { getFirestore, collection, addDoc, getDocs, getDoc,
+  query, where }
+  from "firebase/firestore";
 // import { getAnalytics } from "firebase/analytics";
 
 console.log(
@@ -45,14 +47,17 @@ async function TestFirebase() {
 
 async function saveHistoryItem(historyItem: chrome.history.HistoryItem) {
   try {
-    const docRef = await addDoc(historyRef, {
-      lastVisitTime: historyItem.lastVisitTime,
-      title: historyItem.title,
-      typedCount: historyItem.typedCount,
-      url: historyItem.url,
-      visitCount: historyItem.visitCount
-    });
-    console.log("History written with ID: ", docRef.id);
+    // add domain to historyRef
+    const q = query(historyRef, where("domain", "==", getDomain(historyItem.url)));
+    const querySnapshot = await getDocs(q);
+    if (querySnapshot.size === 0) {
+      // Create a new document for this domain
+      const docRef = await addDoc(historyRef, {
+        domain: getDomain(historyItem.url),
+        // historyItems: [historyItem]
+      });
+      console.log("Document written with ID: ", docRef.id);
+    }
   } catch (e) {
     console.error("Error adding document: ", e);
   }
@@ -68,6 +73,13 @@ async function getHistoryItems() {
 //   });
 // })
 
+// get domain from url
+function getDomain(url: string) {
+  const urlObj = new URL(url)
+  return urlObj.hostname
+}
+
+
 chrome.history.search(
   {
     text: "",
@@ -75,11 +87,12 @@ chrome.history.search(
     maxResults: 1000000
   },
   (historyItems) => {
-    // historyItems.map((historyItem) => {
-    //   console.log(historyItem)
-    //   // saveHistoryItem(historyItem).then(() => {
-    //   //   console.log("saveHistoryItem done")
-    //   // })
-    // })
+    historyItems.map((historyItem) => {
+      // console.log(historyItem)
+      // console.log(getDomain(historyItem.url))
+      saveHistoryItem(historyItem).then(() => {
+        console.log("saveHistoryItem done")
+      })
+    })
   }
 )
