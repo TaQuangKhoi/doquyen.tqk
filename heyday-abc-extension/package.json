@@ -1,6 +1,6 @@
 {
-  "name": "heyday-abc-extension",
-  "displayName": "Heyday.abc",
+  "name": "heynight-abc-extension",
+  "displayName": "Heynight.abc",
   "version": "0.0.1",
   "description": "Collect websites I visited",
   "author": "Keios Starqua",
@@ -10,18 +10,19 @@
     "package": "plasmo package"
   },
   "dependencies": {
+    "firebase": "9.21.0",
     "plasmo": "0.69.2",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@plasmohq/prettier-plugin-sort-imports": "3.6.4",
     "@types/chrome": "0.0.227",
     "@types/node": "18.15.11",
     "@types/react": "18.0.32",
     "@types/react-dom": "18.0.11",
     "prettier": "2.8.7",
-    "typescript": "5.0.3",
-    "@plasmohq/prettier-plugin-sort-imports": "3.6.4"
+    "typescript": "5.0.3"
   },
   "manifest": {
     "host_permissions": [
